@@ -147,6 +147,24 @@
                 <div class="item-info"><span>Colin - 3D Model & Mesh Viewer</span></div>
             </div>
 
+            <!-- 3D Model Item 3: Nicholas -->
+            <div class="gallery-item model-card" data-category="3d">
+                <model-viewer id="interactive-model-nicholas"
+                            src="3D/Nicholas.glb" 
+                            poster="3D/Nicholas.png" 
+                            alt="Nicholas 3D Character Model" 
+                            auto-rotate 
+                            camera-controls 
+                            ar>
+                </model-viewer>
+                
+                <div class="model-controls">
+                    <button class="topo-btn" onclick="toggleWireframeModel('nicholas')">TOPO</button>
+                </div>
+
+                <div class="item-info"><span>Nicholas - 3D Model & Mesh Viewer</span></div>
+            </div>
+
         </section>
     </main>
 
@@ -201,6 +219,11 @@
                 isWireframe: false,
                 standardSrc: '3D/Colin.glb',
                 wireframeSrc: '3D/Colin Wire.glb'
+            },
+            nicholas: {
+                isWireframe: false,
+                standardSrc: '3D/Nicholas.glb',
+                wireframeSrc: '3D/Nicholas Wire.glb'
             }
         };
 
