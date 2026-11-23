@@ -153,7 +153,7 @@
             <div class="gallery-item model-card" data-category="3d">
                 <model-viewer id="interactive-model-nicholas"
                             src="3D/Nicholas.glb" 
-                            poster="3D/Nick X Logo.png" 
+                            poster="3D/nick shapes and beats_2.jpg" 
                             alt="Nicholas 3D Character Model" 
                             loading="lazy"
                             auto-rotate 
@@ -172,19 +172,30 @@
             <div class="gallery-item model-card" data-category="3d">
                 <model-viewer id="interactive-model-goggles"
                             src="3D/Goggles.glb" 
-                            poster="3D/Goggles.png" 
+                            poster="3D/Goggles_2.jpg" 
                             alt="Goggles 3D Model" 
                             loading="lazy"
                             auto-rotate 
                             camera-controls 
                             ar>
                 </model-viewer>
-                
-                <div class="model-controls">
-                    <button class="topo-btn" onclick="toggleWireframeModel('goggles', this)">TOPO</button>
-                </div>
 
                 <div class="item-info"><span>Goggles - 3D Model & Mesh Viewer</span></div>
+            </div>
+
+            <!-- 3D Model Item 5: Bobblecat -->
+            <div class="gallery-item model-card" data-category="3d">
+                <model-viewer id="interactive-model-bobblecat"
+                            src="3D/Bobble Cat.glb" 
+                            poster="3D/Bobble Cat.png" 
+                            alt="Bobblecat 3D Model" 
+                            loading="lazy"
+                            auto-rotate 
+                            camera-controls 
+                            ar>
+                </model-viewer>
+
+                <div class="item-info"><span>Bobblecat - 3D Model & Mesh Viewer</span></div>
             </div>
 
         </section>
@@ -246,11 +257,6 @@
                 isWireframe: false,
                 standardSrc: '3D/Nicholas.glb',
                 wireframeSrc: '3D/Nicholas Wire.glb'
-            },
-            goggles: {
-                isWireframe: false,
-                standardSrc: '3D/Goggles.glb',
-                wireframeSrc: '3D/Goggles Wire.glb'
             }
         };
 
@@ -359,6 +365,3 @@
     </script>
 </body>
 </html>
-
-
-
