@@ -111,6 +111,11 @@
                 <div class="item-info"><span>2D Illustration</span></div>
             </div>
 
+            <div class="gallery-item" data-category="2d" data-key="nicholas-shapes-beats">
+                <img src="2D/nick shapes and beats.jpg" alt="Nicholas Shapes and Beats 2D Illustration">
+                <div class="item-info"><span>2D Illustration</span></div>
+            </div>
+
             <!-- 3D Model Item 1: Rufus -->
             <div class="gallery-item model-card" data-category="3d">
                 <model-viewer id="interactive-model-rufus"
@@ -165,12 +170,30 @@
                 <div class="item-info"><span>Nicholas - 3D Model & Mesh Viewer</span></div>
             </div>
 
+            <!-- 3D Model Item 4: Goggles -->
+            <div class="gallery-item model-card" data-category="3d">
+                <model-viewer id="interactive-model-goggles"
+                            src="3D/Goggles.glb" 
+                            poster="3D/Goggles.jpg" 
+                            alt="Goggles 3D Model" 
+                            auto-rotate 
+                            camera-controls 
+                            ar>
+                </model-viewer>
+                
+                <div class="model-controls">
+                    <button class="topo-btn" onclick="toggleWireframeModel('goggles')">TOPO</button>
+                </div>
+
+                <div class="item-info"><span>Goggles - 3D Model & Mesh Viewer</span></div>
+            </div>
+
         </section>
     </main>
 
     <!-- Lightbox Modal (For 2D Artwork Only) -->
     <div id="lightbox" class="lightbox">
-        <span class="close">&times;</span>
+        <span class="close">×</span>
         <button class="lightbox-arrow lightbox-prev" id="lightbox-prev" title="Previous">
             <img src="Arrow Left.png" alt="Previous">
         </button>
@@ -184,7 +207,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 JamSketch.com. All rights reserved.</p>
+        <p>© 2026 JamSketch.com. All rights reserved.</p>
     </footer>
 
     <!-- Scripts -->
@@ -224,14 +247,19 @@
                 isWireframe: false,
                 standardSrc: '3D/Nicholas.glb',
                 wireframeSrc: '3D/Nicholas Wire.glb'
+            },
+            goggles: {
+                isWireframe: false,
+                standardSrc: '3D/Goggles.glb',
+                wireframeSrc: '3D/Goggles Wire.glb'
             }
         };
 
         function toggleWireframeModel(modelKey) {
             const modelViewer = document.getElementById(`interactive-model-${modelKey}`);
-            if (!modelViewer) return;
-
             const state = modelStates[modelKey];
+            if (!modelViewer || !state) return;
+
             state.isWireframe = !state.isWireframe;
             modelViewer.src = state.isWireframe ? state.wireframeSrc : state.standardSrc;
         }
